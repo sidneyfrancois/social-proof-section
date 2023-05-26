@@ -1,0 +1,123 @@
+@import url("https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;500;700&display=swap");
+
+:root {
+  --primary-very-dark-magenta: hsl(300, 43%, 22%);
+  --primary-soft-pink: hsl(333, 80%, 67%);
+
+  --neutral-dark-grayish-magenta: hsl(303, 10%, 53%);
+  --neutral-light-grayish-magenta: hsl(300, 24%, 96%);
+  --neutral-white: hsl(0, 0%, 100%);
+
+  --font-league-400: 400;
+  --font-league-500: 500;
+  --font-league-700: 700;
+}
+
+body {
+  font-family: "League Spartan", sans-serif;
+  font-size: 1rem;
+  display: flex;
+  flex-direction: column;
+  padding: 5rem 0;
+
+  background-image: url("images/bg-pattern-top-mobile.svg");
+  background-repeat: no-repeat;
+  background-position: top;
+}
+
+.head-title {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+
+  color: var(--neutral-dark-grayish-magenta);
+  text-align: center;
+  padding: 0 2rem;
+}
+
+.head-title h1 {
+  color: var(--primary-very-dark-magenta);
+  font-size: 2.5rem;
+  font-weight: var(--font-league-700);
+  width: 90%;
+  margin: 0 auto;
+  line-height: 0.75;
+}
+
+.rates {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin: 2.5rem 1.5rem;
+  /* align-items: center; */
+}
+
+.stars {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.star {
+  content: "";
+  background-image: url("images/icon-star.svg");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 16px;
+  width: 17px;
+}
+
+.rate-label {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.7rem;
+
+  background-color: var(--neutral-light-grayish-magenta);
+  color: var(--primary-very-dark-magenta);
+  font-weight: var(--font-league-700);
+  border-radius: 10px;
+  padding: 1rem 0;
+}
+
+.cards {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.card-profile {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+
+  background-color: var(--primary-very-dark-magenta);
+  color: var(--neutral-light-grayish-magenta);
+  padding: 2rem;
+  margin: 0 1.5rem;
+  border-radius: 10px;
+  font-weight: var(--font-league-500);
+}
+
+.card-head {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.card-head img {
+  border-radius: 50%;
+}
+
+.card-head h3 {
+  /* flex-grow: 1; */
+}
+
+.card-head label {
+  color: var(--primary-soft-pink);
+  display: block;
+  font-weight: var(--font-league-400);
+}
