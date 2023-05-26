@@ -26,6 +26,7 @@ body {
 .container {
   display: flex;
   flex-direction: column;
+  align-items: center;
   gap: 2.5rem;
 
   padding: 0 2rem;
@@ -34,11 +35,11 @@ body {
 .head-title {
   display: flex;
   flex-direction: column;
+  align-items: center;
   gap: 1rem;
 
   color: var(--neutral-dark-grayish-magenta);
   text-align: center;
-  /* padding: 0 2rem; */
 }
 
 .head-title h1 {
@@ -46,8 +47,6 @@ body {
   font-size: 2.5rem;
   font-weight: var(--font-league-700);
   max-width: 12ch;
-  margin-left: auto;
-  margin-right: auto;
   margin-bottom: 1rem;
   line-height: 0.75;
 }
@@ -55,7 +54,10 @@ body {
 .rates {
   display: flex;
   flex-direction: column;
+  align-items: center;
   gap: 1rem;
+
+  width: 100%;
 }
 
 .stars {
@@ -79,6 +81,8 @@ body {
   flex-direction: column;
   align-items: center;
   gap: 0.7rem;
+  width: 100%;
+  max-width: 25rem;
 
   background-color: var(--neutral-light-grayish-magenta);
   color: var(--primary-very-dark-magenta);
@@ -94,6 +98,7 @@ body {
   width: 100px;
   height: 1rem;
   display: block;
+  margin-bottom: 0.5rem;
 }
 
 .cards {
@@ -113,6 +118,7 @@ body {
   padding: 2rem;
   border-radius: 10px;
   font-weight: var(--font-league-500);
+  max-width: 25rem;
 }
 
 .card-head {
@@ -124,14 +130,42 @@ body {
 
 .card-head img {
   border-radius: 50%;
+  width: 2.5rem;
 }
 
 .card-head h3 {
-  /* flex-grow: 1; */
+  line-height: 1.2;
 }
 
 .card-head label {
   color: var(--primary-soft-pink);
   display: block;
   font-weight: var(--font-league-400);
+}
+
+@media (min-width: 50rem) {
+  .container {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .head-title {
+    align-items: flex-start;
+
+    text-align: initial;
+    width: 40%;
+  }
+
+  .head-title p {
+    max-width: 40ch;
+  }
+
+  .rates {
+    width: initial;
+    flex-grow: 3;
+  }
+
+  .cards {
+    min-width: 100%;
+  }
 }
