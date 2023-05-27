@@ -103,6 +103,8 @@ body {
   border-radius: 10px;
   font-weight: var(--font-league-500);
   max-width: 25rem;
+  min-width: 13.125rem;
+  line-height: 1.5;
 }
 
 .card-head {
@@ -117,20 +119,18 @@ body {
   width: 2.5rem;
 }
 
-.card-head h3 {
-  line-height: 1.2;
-}
-
 .card-head label {
   color: var(--primary-soft-pink);
   display: block;
   font-weight: var(--font-league-400);
 }
 
-@media (min-width: 50rem) {
+@media (min-width: 53.125rem) {
   .container {
     flex-direction: row;
     flex-wrap: wrap;
+    padding: 0 10rem;
+    gap: 2rem;
   }
 
   .head-title {
@@ -146,10 +146,48 @@ body {
 
   .rates {
     width: initial;
-    flex-grow: 3;
+    flex-grow: 1;
+  }
+
+  .rate-label {
+    flex-direction: row;
+    gap: 2rem;
+    max-width: 30rem;
+    padding: 1rem 2rem;
+  }
+
+  .rate-label::before {
+    margin-bottom: initial;
+  }
+
+  .rate-label:first-of-type {
+    align-self: flex-start;
+  }
+
+  .rate-label:last-of-type {
+    align-self: flex-end;
   }
 
   .cards {
     min-width: 100%;
+  }
+
+  .cards {
+    flex-direction: row;
+    justify-content: flex-start;
+    gap: 2rem;
+    margin-top: 2rem;
+  }
+
+  .card-profile {
+    padding: 2rem 2.4rem;
+  }
+
+  .card-profile:first-of-type {
+    transform: translateY(-1rem);
+  }
+
+  .card-profile:last-of-type {
+    transform: translateY(1rem);
   }
 }
