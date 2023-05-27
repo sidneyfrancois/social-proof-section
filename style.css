@@ -20,7 +20,7 @@ body {
   background-image: url("images/bg-pattern-top-mobile.svg");
   background-repeat: no-repeat;
   background-position: top;
-  padding-top: 5rem;
+  padding-top: 8rem;
 }
 
 .container {
@@ -48,7 +48,7 @@ body {
   font-weight: var(--font-league-700);
   max-width: 12ch;
   margin-bottom: 1rem;
-  line-height: 0.75;
+  line-height: 0.8;
 }
 
 .rates {
@@ -126,6 +126,14 @@ body {
 }
 
 @media (min-width: 53.125rem) {
+  body {
+    background-image: url("images/bg-pattern-top-desktop.svg"),
+      url("images/bg-pattern-bottom-desktop.svg");
+    background-repeat: no-repeat, no-repeat;
+    background-position: top left, bottom right;
+    background-size: auto, 50rem;
+  }
+
   .container {
     flex-direction: row;
     flex-wrap: wrap;
